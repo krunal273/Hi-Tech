@@ -1,0 +1,83 @@
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\bin\Debug\project.exe.config
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\bin\Debug\project.exe
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\bin\Debug\project.pdb
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\bin\Debug\EntityFramework.dll
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\bin\Debug\EntityFramework.xml
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.pre.AccountantForm.resources
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.pre.loginForm.resources
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.pre.MISManagerForm.resources
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.pre.OrderClerksForm.resources
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.pre.SalesManagerForm.resources
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.Properties.Resources.resources
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.csproj.GenerateResource.cache
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.csproj.CopyComplete
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.exe
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.pdb
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.csprojAssemblyReference.cache
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.csprojAssemblyReference.cache
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.pre.AccountantForm.resources
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.pre.InventoryControllerForm.resources
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.pre.loginForm.resources
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.pre.MISManagerForm.resources
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.pre.OrderClerksForm.resources
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.pre.SalesManagerForm.resources
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.Properties.Resources.resources
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.csproj.GenerateResource.cache
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.exe
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.pdb
+C:\Users\Zhe\Desktop\project_7_3011\project\bin\Debug\project.exe.config
+C:\Users\Zhe\Desktop\project_7_3011\project\bin\Debug\project.exe
+C:\Users\Zhe\Desktop\project_7_3011\project\bin\Debug\project.pdb
+C:\Users\Zhe\Desktop\project_7_3011\project\bin\Debug\EntityFramework.dll
+C:\Users\Zhe\Desktop\project_7_3011\project\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Zhe\Desktop\project_7_3011\project\bin\Debug\EntityFramework.xml
+C:\Users\Zhe\Desktop\project_7_3011\project\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Zhe\Desktop\project_7_3011\project\obj\Debug\project.csproj.CopyComplete
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.csprojAssemblyReference.cache
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.pre.AccountantForm.resources
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.pre.ChangePasswordForm.resources
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.pre.InventoryControllerForm.resources
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.pre.loginForm.resources
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.pre.MISManagerForm.resources
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.pre.OrderClerksForm.resources
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.pre.SalesManagerForm.resources
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.Properties.Resources.resources
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.csproj.GenerateResource.cache
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.exe
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.pdb
+C:\Users\Zhe\Desktop\project-07-31\project\bin\Debug\project.exe.config
+C:\Users\Zhe\Desktop\project-07-31\project\bin\Debug\project.exe
+C:\Users\Zhe\Desktop\project-07-31\project\bin\Debug\project.pdb
+C:\Users\Zhe\Desktop\project-07-31\project\bin\Debug\EntityFramework.dll
+C:\Users\Zhe\Desktop\project-07-31\project\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Zhe\Desktop\project-07-31\project\bin\Debug\EntityFramework.xml
+C:\Users\Zhe\Desktop\project-07-31\project\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Zhe\Desktop\project-07-31\project\obj\Debug\project.csproj.CopyComplete
+C:\Users\kruna\Documents\project\project\bin\Debug\project.exe.config
+C:\Users\kruna\Documents\project\project\bin\Debug\project.exe
+C:\Users\kruna\Documents\project\project\bin\Debug\project.pdb
+C:\Users\kruna\Documents\project\project\bin\Debug\EntityFramework.dll
+C:\Users\kruna\Documents\project\project\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kruna\Documents\project\project\bin\Debug\EntityFramework.xml
+C:\Users\kruna\Documents\project\project\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kruna\Documents\project\project\obj\Debug\project.csprojAssemblyReference.cache
+C:\Users\kruna\Documents\project\project\obj\Debug\project.pre.AccountantForm.resources
+C:\Users\kruna\Documents\project\project\obj\Debug\project.pre.ChangePasswordForm.resources
+C:\Users\kruna\Documents\project\project\obj\Debug\project.pre.InventoryControllerForm.resources
+C:\Users\kruna\Documents\project\project\obj\Debug\project.pre.loginForm.resources
+C:\Users\kruna\Documents\project\project\obj\Debug\project.pre.MISManagerForm.resources
+C:\Users\kruna\Documents\project\project\obj\Debug\project.pre.OrderClerksForm.resources
+C:\Users\kruna\Documents\project\project\obj\Debug\project.pre.SalesManagerForm.resources
+C:\Users\kruna\Documents\project\project\obj\Debug\project.Properties.Resources.resources
+C:\Users\kruna\Documents\project\project\obj\Debug\project.csproj.GenerateResource.cache
+C:\Users\kruna\Documents\project\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+C:\Users\kruna\Documents\project\project\obj\Debug\project.csproj.CopyComplete
+C:\Users\kruna\Documents\project\project\obj\Debug\project.exe
+C:\Users\kruna\Documents\project\project\obj\Debug\project.pdb
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.pre.ChangePasswordForm.resources
+C:\Users\kruna\Documents\COURSE TASK\SEM 3\MULTI-TIER APPLICATIONS DEVELOPMENT\project\project\obj\Debug\project.pre.InventoryControllerForm.resources

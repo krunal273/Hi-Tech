@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="projectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="projectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="authors" EntityType="projectModel.author" />
+    <EntitySet Name="books" EntityType="projectModel.book" />
+    <EntitySet Name="bookOrders" EntityType="projectModel.bookOrder" />
+    <EntitySet Name="categories" EntityType="projectModel.category" />
+    <EntitySet Name="customers" EntityType="projectModel.customer" />
+    <EntitySet Name="customerOrders" EntityType="projectModel.customerOrder" />
+    <EntitySet Name="invoices" EntityType="projectModel.invoice" />
+    <EntitySet Name="publishers" EntityType="projectModel.publisher" />
+    <EntitySet Name="roles" EntityType="projectModel.role" />
+    <EntitySet Name="users" EntityType="projectModel.user" />
+    <AssociationSet Name="FK_book_author" Association="projectModel.FK_book_author">
+      <End Role="author" EntitySet="authors" />
+      <End Role="book" EntitySet="books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_book_category" Association="projectModel.FK_book_category">
+      <End Role="category" EntitySet="categories" />
+      <End Role="book" EntitySet="books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_book_publisher" Association="projectModel.FK_book_publisher">
+      <End Role="publisher" EntitySet="publishers" />
+      <End Role="book" EntitySet="books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_bookOrder_book_ID" Association="projectModel.FK_bookOrder_book_ID">
+      <End Role="book" EntitySet="books" />
+      <End Role="bookOrder" EntitySet="bookOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_bookOrder_customerOrder" Association="projectModel.FK_bookOrder_customerOrder">
+      <End Role="customerOrder" EntitySet="customerOrders" />
+      <End Role="bookOrder" EntitySet="bookOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_customerOrder_customer" Association="projectModel.FK_customerOrder_customer">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="customerOrder" EntitySet="customerOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_invoice_customerOrder" Association="projectModel.FK_invoice_customerOrder">
+      <End Role="customerOrder" EntitySet="customerOrders" />
+      <End Role="invoice" EntitySet="invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_users_role" Association="projectModel.FK_users_role">
+      <End Role="role" EntitySet="roles" />
+      <End Role="user" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="author">
+    <Key>
+      <PropertyRef Name="AuthorID" />
+    </Key>
+    <Property Name="AuthorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="books" Relationship="projectModel.FK_book_author" FromRole="author" ToRole="book" />
+  </EntityType>
+  <EntityType Name="book">
+    <Key>
+      <PropertyRef Name="BookID" />
+    </Key>
+    <Property Name="BookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ISBN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UnitPrice" Type="Double" Nullable="false" />
+    <Property Name="YearPublished" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="QOH" Type="Int32" Nullable="false" />
+    <Property Name="AuthorID" Type="Int32" Nullable="false" />
+    <Property Name="PublishID" Type="Int32" Nullable="false" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="author" Relationship="projectModel.FK_book_author" FromRole="book" ToRole="author" />
+    <NavigationProperty Name="category" Relationship="projectModel.FK_book_category" FromRole="book" ToRole="category" />
+    <NavigationProperty Name="publisher" Relationship="projectModel.FK_book_publisher" FromRole="book" ToRole="publisher" />
+    <NavigationProperty Name="bookOrders" Relationship="projectModel.FK_bookOrder_book_ID" FromRole="book" ToRole="bookOrder" />
+  </EntityType>
+  <EntityType Name="bookOrder">
+    <Key>
+      <PropertyRef Name="CustomerOrderID" />
+      <PropertyRef Name="BookID" />
+    </Key>
+    <Property Name="CustomerOrderID" Type="Int32" Nullable="false" />
+    <Property Name="BookID" Type="Int32" Nullable="false" />
+    <Property Name="OrderQuantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="book" Relationship="projectModel.FK_bookOrder_book_ID" FromRole="bookOrder" ToRole="book" />
+    <NavigationProperty Name="customerOrder" Relationship="projectModel.FK_bookOrder_customerOrder" FromRole="bookOrder" ToRole="customerOrder" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="books" Relationship="projectModel.FK_book_category" FromRole="category" ToRole="book" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Street" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PostalCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FaxNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreditLimit" Type="Double" Nullable="false" />
+    <NavigationProperty Name="customerOrders" Relationship="projectModel.FK_customerOrder_customer" FromRole="customer" ToRole="customerOrder" />
+  </EntityType>
+  <EntityType Name="customerOrder">
+    <Key>
+      <PropertyRef Name="CustomerOrderID" />
+    </Key>
+    <Property Name="CustomerOrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="bookOrders" Relationship="projectModel.FK_bookOrder_customerOrder" FromRole="customerOrder" ToRole="bookOrder" />
+    <NavigationProperty Name="customer" Relationship="projectModel.FK_customerOrder_customer" FromRole="customerOrder" ToRole="customer" />
+    <NavigationProperty Name="invoice" Relationship="projectModel.FK_invoice_customerOrder" FromRole="customerOrder" ToRole="invoice" />
+  </EntityType>
+  <EntityType Name="invoice">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+    <Property Name="TotalPrice" Type="Double" Nullable="false" />
+    <Property Name="TypeOfPayment" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PaymentDate" Type="DateTime" Precision="0" />
+    <Property Name="IsPaid" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="customerOrder" Relationship="projectModel.FK_invoice_customerOrder" FromRole="invoice" ToRole="customerOrder" />
+  </EntityType>
+  <EntityType Name="publisher">
+    <Key>
+      <PropertyRef Name="PublisherID" />
+    </Key>
+    <Property Name="PublisherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="books" Relationship="projectModel.FK_book_publisher" FromRole="publisher" ToRole="book" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="users" Relationship="projectModel.FK_users_role" FromRole="role" ToRole="user" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="role" Relationship="projectModel.FK_users_role" FromRole="user" ToRole="role" />
+  </EntityType>
+  <Association Name="FK_book_author">
+    <End Type="projectModel.author" Role="author" Multiplicity="1" />
+    <End Type="projectModel.book" Role="book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="author">
+        <PropertyRef Name="AuthorID" />
+      </Principal>
+      <Dependent Role="book">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_book_category">
+    <End Type="projectModel.category" Role="category" Multiplicity="1" />
+    <End Type="projectModel.book" Role="book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="book">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_book_publisher">
+    <End Type="projectModel.publisher" Role="publisher" Multiplicity="1" />
+    <End Type="projectModel.book" Role="book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="publisher">
+        <PropertyRef Name="PublisherID" />
+      </Principal>
+      <Dependent Role="book">
+        <PropertyRef Name="PublishID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_bookOrder_book_ID">
+    <End Type="projectModel.book" Role="book" Multiplicity="1" />
+    <End Type="projectModel.bookOrder" Role="bookOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="book">
+        <PropertyRef Name="BookID" />
+      </Principal>
+      <Dependent Role="bookOrder">
+        <PropertyRef Name="BookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_bookOrder_customerOrder">
+    <End Type="projectModel.customerOrder" Role="customerOrder" Multiplicity="1" />
+    <End Type="projectModel.bookOrder" Role="bookOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customerOrder">
+        <PropertyRef Name="CustomerOrderID" />
+      </Principal>
+      <Dependent Role="bookOrder">
+        <PropertyRef Name="CustomerOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_customerOrder_customer">
+    <End Type="projectModel.customer" Role="customer" Multiplicity="1" />
+    <End Type="projectModel.customerOrder" Role="customerOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="customerOrder">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_invoice_customerOrder">
+    <End Type="projectModel.customerOrder" Role="customerOrder" Multiplicity="1" />
+    <End Type="projectModel.invoice" Role="invoice" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="customerOrder">
+        <PropertyRef Name="CustomerOrderID" />
+      </Principal>
+      <Dependent Role="invoice">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_users_role">
+    <End Type="projectModel.role" Role="role" Multiplicity="1" />
+    <End Type="projectModel.user" Role="user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
